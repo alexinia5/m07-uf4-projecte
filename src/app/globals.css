@@ -6,12 +6,13 @@ section {
   padding: 1rem;
 }
 
+/* home */
 .main {
-  background-color: rgb(166, 164, 158); 
+  background-color: rgb(219, 216, 208); 
 }
 
 .mainLanding {
-  background-image: url('/gallery/wallpaper.jpg');
+  background-image: url('/home/wallpaper.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   border-bottom-right-radius: 35%;
@@ -20,7 +21,6 @@ section {
 .backdrop {
   border-bottom-right-radius: 35%;
 }
-
 
 .main-info {
   width: 700px;
@@ -31,14 +31,58 @@ section {
 .about-us {
   display: flex;
   justify-content: center;
-  background-color: rgb(166, 164, 158);
+  background-color: rgb(219, 216, 208);
 }
 
 .about-info {
-  background-color: #080912;
 }
 
+.our-menu {
+  background-color:#09121d;
+  border-top-left-radius: 35%;
+  height: 115vh;
+}
 
+/* contact us */
+.contact {
+  background-image: url('/contact/contact.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.contact-info {
+  background-color: rgb(245, 242, 235); 
+  height: 150vh;
+}
+
+/* reservation */
+.cover-reservation {
+  background-image: url('/reservation/reservation.jpg');
+  background-position: center;
+}
+
+.cover-reservation, .backdrop-reserv  {
+  border-bottom-left-radius: 20%;
+  border-bottom-right-radius: 20%;
+}
+
+.reserv-info {
+  background-color: rgba(189, 175, 158, 0.7);
+}
+
+.cover-reservation, .contact-reserv {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.contact-reserv {
+  background-image: url('/reservation/contact-reserv.jpeg');
+  background-position: 40%;
+  height: 50vh;
+}
+
+/* footer */
 .footer {
   width: 100%;
   height: 580px;

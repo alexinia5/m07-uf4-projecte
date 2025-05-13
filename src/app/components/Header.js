@@ -9,7 +9,6 @@ function Header() {
         <div className="space-x-6">
           <Link href="/about" className="hover:text-amber-100">NOSOTROS</Link>
           <Link href="/menu" className="hover:text-amber-100">MENÚ</Link>
-          <Link href="/gallery" className="hover:text-amber-100">GALERÍA</Link>
           <Link href="/contact" className="hover:text-amber-100">CONTACTO</Link>
         </div>
         <Link href="/reservation" className="bg-transparent text-stone-600 border-1 
