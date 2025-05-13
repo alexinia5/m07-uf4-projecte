@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Header from '.././components/Header';
 import Footer from '.././components/Footer';
 import ContactForm from '../components/form_contact';
-import CardForm from '../components/card';
+import Card from '../components/card';
 import CardInfo from '../components/card_info';
 
 export default function Contact() {
@@ -27,13 +27,15 @@ export default function Contact() {
           </div>
         </section>
         <section className="contact-info flex flex-col justify-center items-center gap-5">
-          <div className="flex flex-col">
+          <div className="flex flex-row gap-30">
             <ContactForm/>
-            <CardForm/>
+            <Card/>
           </div>
-          <CardInfo/>
-          <div className='relative w-4xl h-72'>
-            <Image src="/home/maps.jpeg" alt="Mapa" fill className="rounded-3xl object-cover" style={{ objectPosition: 'center' }}/>
+          <div className="flex flex-col justify-center items-center gap-10">
+            <CardInfo/>
+            <div className='relative w-4xl h-60'>            
+              <Image src="/home/maps.jpeg" alt="Mapa" fill className="rounded-3xl object-cover" style={{ objectPosition: 'center' }}/>
+            </div>
           </div>
         </section>
       </main>
