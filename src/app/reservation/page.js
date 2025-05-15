@@ -34,12 +34,12 @@ export default function Reservation() {
           </div>
         </section>
         <section className="contact-reserv flex justify-center items-center">
-          <div className="reserv-info flex flex-col justify-center items-center gap-9 w-lg h-40">
+          <div className="reserv-info flex flex-col justify-center items-center gap-9 w-lg h-48">
               <div className="text-center">
                 <h2 className="text-2xl font-semibold text-[#cebdb3]">¿Tienes preguntas?</h2>
                 <h1 className="text-5xl font-semibold text-[#f1eae5]">Contactáctanos</h1>
               </div>
-              <Link href="/contact" className="text-white">CONTACTAR</Link>
+              <Link href="/contact" className="text-white rounded-2xl text-sm bg-[#37312A] px-5 py-2 transition-all hover:bg-[#b89f81] hover:text-black">CONTACTAR</Link>
           </div>
         </section>
       </main>

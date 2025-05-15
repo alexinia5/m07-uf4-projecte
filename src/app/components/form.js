@@ -1,4 +1,4 @@
-
+// reutilizar formulario tanto para contacto como para reserva --> añadir campos según la página con children
 function ReservationForm() {
     return(
         <div className="flex items-center justify-center mb-2">
