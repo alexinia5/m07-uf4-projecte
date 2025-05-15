@@ -12,32 +12,32 @@ export default function Reservation() {
       <Header/>
       <main className="bg-stone-300">
         <section className="cover-reservation flex justify-center items-center">
-          <div className="backdrop-reserv absolute inset-0 bg-black/20 z-0"></div>
+          <div className="backdrop-reserv absolute inset-0 bg-black/25 z-0"></div>
           <div className="reserv-info relative z-10 text-white flex flex-col justify-center items-center gap-7">
-            <div className="flex flex-col justify-center items-center gap-3 w-xl h-36">
-              <h1>Rerserva una mesa</h1>
-              <h2 className="text-center px-6">
+            <div className="flex flex-col justify-center items-center gap-3 w-xl h-44">
+              <h1 className="text-6xl text-center text-[#0E0E10]">Rerserva tu mesa</h1>
+              <p className="text-sm text-center w-sm text-[#122414]">
                 Lorem ipsum dolor sit, amet consectetur adipisicing 
                 elit. Dicta ducimus rerum veritatis vel unde? Nemo 
                 praesentium earum aliquam explicabo maiores voluptas.
-              </h2>
+              </p>
             </div>
           </div>
         </section>
         <section className="flex justify-center items-center">
           <div className="inline-flex">
             <Image src="/reservation/form.jpeg" className="relative top-10" width={380} height={300} alt="" />
-            <div className="resevation-form bg-white w-lg relative right-15 bottom-15 p-9">
-               <h2 className="mb-5">Online Reservation</h2>
+            <div className="bg-white w-lg h-fit relative right-15 bottom-7 p-8 flex flex-col gap-6">
+               <h2 className="text-2xl font-semibold text-[#53473f]">Reserva una experiencia única</h2>
                <ReservationForm/>
             </div>
           </div>
         </section>
         <section className="contact-reserv flex justify-center items-center">
-          <div className="flex flex-col justify-center items-center gap-3 w-xl h-36">
-              <div className="text-white text-center">
-                <h2>¿Tienes preguntas?</h2>
-                <h1>Contactáctanos</h1>
+          <div className="reserv-info flex flex-col justify-center items-center gap-9 w-lg h-40">
+              <div className="text-center">
+                <h2 className="text-2xl font-semibold text-[#cebdb3]">¿Tienes preguntas?</h2>
+                <h1 className="text-5xl font-semibold text-[#f1eae5]">Contactáctanos</h1>
               </div>
               <Link href="/contact" className="text-white">CONTACTAR</Link>
           </div>
