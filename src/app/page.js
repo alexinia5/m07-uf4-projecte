@@ -26,11 +26,11 @@ export default function Home() {
           </div>
         </section>
         <section className="about-us">
-          <div className="flex justify-center items-center gap-8 p-10">
+          <div className="flex justify-center items-center gap-5 p-10">
             <Image src="/home/home-about-us.jpeg" width={400} height={500} alt="" />
-            <div className="about-info text-white p-6 w-3xl text-center flex flex-col gap-8">
-              <h1 className="text-2xl">Bienvenidos a nuestro restaurante</h1>
-              <div>
+            <div className="about-info text-white p-6 w-3xl text-center flex flex-col items-center gap-8">
+              <h1 className="text-5xl text-[#190A02] font-semibold">Bienvenidos a nuestro restaurante</h1>
+              <div className="text-[#0F1D00] w-100">
                 <p>Lorem ipsum dolor sit, amet consectetur
                   adipisicing elit. Dicta ducimus rerum veritatis
                   vel unde? Nemo praesentium earum aliquam explicabo
@@ -43,19 +43,18 @@ export default function Home() {
                   maiores voluptas inventore numquam facere. Ea
                   inventore eaque ratione tempora cum.</p>
               </div>
-              <Link href="/about">NOSOTROS</Link>
             </div>
             <Image src="/home/about-home.jpeg" width={450} height={500} alt="" />
           </div>
         </section>
         <section className="our-menu mt-14 flex flex-col justify-center items-center gap-8">
-          <div className="menu-descrip-h text-stone-100 text-center w-sm">
-            <h1 className="mb-4">Descubre nuestro menú</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur
+          <div className="menu-descrip-h text-stone-100 text-center flex flex-col justify-center items-center w-sm">
+            <h1 className="mb-4 text-4xl text-[#b8b156]">Descubre nuestro menú</h1>
+            <p className="text-sm w-75 text-[#ced6cb]">
+              Lorem ipsum dolor sit, amet consectetur
               adipisicing elit. Dicta ducimus rerum veritatis
               vel unde? Nemo praesentium earum aliquam explicabo
-              maiores voluptas inventore numquam facere. Ea
-              inventore eaque ratione tempora cum.</p>
+              maiores voluptas inventore numquam facere.</p>
           </div>
           <div className="flex flex-row gap-10 bg-[#DBD8D0] p-7 rounded-3xl">
             <div className="starters">
