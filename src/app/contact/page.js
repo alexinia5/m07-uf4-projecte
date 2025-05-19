@@ -4,9 +4,8 @@ import Image from 'next/image';
 
 import Header from '.././components/Header';
 import Footer from '.././components/Footer';
-import ContactForm from '../components/form_contact';
-import Card from '../components/card';
-import CardInfo from '../components/card_info';
+import ContactForm from '../components/FormContact';
+import CardInfo from '../components/CardInfo';
 
 export default function Contact() {
   return (
@@ -29,7 +28,6 @@ export default function Contact() {
         <section className="contact-info flex flex-col justify-center items-center gap-5">
           <div className="flex flex-row gap-30">
             <ContactForm/>
-            <Card/>
           </div>
           <div className="flex flex-col justify-center items-center gap-10">
             <CardInfo/>

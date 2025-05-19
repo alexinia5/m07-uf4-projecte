@@ -20,11 +20,11 @@ exports.Prisma = Prisma
 exports.$Enums = {}
 
 /**
- * Prisma Client JS version: 6.8.0
+ * Prisma Client JS version: 6.8.2
  * Query Engine version: 2060c79ba17c6bb9f5823312b6f6b7f4a845738e
  */
 Prisma.prismaVersion = {
-  client: "6.8.0",
+  client: "6.8.2",
   engine: "2060c79ba17c6bb9f5823312b6f6b7f4a845738e"
 }
 
@@ -120,11 +120,35 @@ exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
   Serializable: 'Serializable'
 });
 
-exports.Prisma.UserScalarFieldEnum = {
+exports.Prisma.ReservationScalarFieldEnum = {
+  id: 'id',
+  firstName: 'firstName',
+  lastName: 'lastName',
+  guest: 'guest',
+  date: 'date',
+  hour: 'hour',
+  parking: 'parking',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.ContactScalarFieldEnum = {
+  id: 'id',
+  firstName: 'firstName',
+  lastName: 'lastName',
+  email: 'email',
+  phone: 'phone',
+  message: 'message',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+};
+
+exports.Prisma.MealScalarFieldEnum = {
   id: 'id',
   name: 'name',
-  email: 'email',
-  age: 'age',
+  type: 'type',
+  price: 'price',
+  allergens: 'allergens',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'
 };
@@ -134,14 +158,42 @@ exports.Prisma.SortOrder = {
   desc: 'desc'
 };
 
-exports.Prisma.UserOrderByRelevanceFieldEnum = {
-  name: 'name',
-  email: 'email'
+exports.Prisma.ReservationOrderByRelevanceFieldEnum = {
+  firstName: 'firstName',
+  lastName: 'lastName',
+  date: 'date',
+  hour: 'hour'
 };
 
+exports.Prisma.ContactOrderByRelevanceFieldEnum = {
+  firstName: 'firstName',
+  lastName: 'lastName',
+  email: 'email',
+  phone: 'phone',
+  message: 'message'
+};
+
+exports.Prisma.NullsOrder = {
+  first: 'first',
+  last: 'last'
+};
+
+exports.Prisma.MealOrderByRelevanceFieldEnum = {
+  name: 'name',
+  allergens: 'allergens'
+};
+exports.MealType = exports.$Enums.MealType = {
+  starter: 'starter',
+  main: 'main',
+  dessert: 'dessert',
+  drink: 'drink',
+  vegetarian: 'vegetarian'
+};
 
 exports.Prisma.ModelName = {
-  User: 'User'
+  Reservation: 'Reservation',
+  Contact: 'Contact',
+  Meal: 'Meal'
 };
 
 /**

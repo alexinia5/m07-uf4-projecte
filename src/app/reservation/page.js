@@ -4,7 +4,7 @@ import Image from "next/image";
 
 import Header from '.././components/Header'
 import Footer from '.././components/Footer'
-import ReservationForm from '.././components/form'
+import ReservationForm from '.././components/Form'
 
 export default function Reservation() {
   return (

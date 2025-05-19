@@ -1,33 +1,26 @@
 # Backend
 
-## Gestionar reservas desde el backend 
-Las reservas, una vez que coge los campos del formulario, se gestiona el CRUD desde el backend sin mostrarlos en la página web.
-    - Mostrarlo en Prisma Studio
-
-Gestionar:
-- C: Nueva reserva: mostrar un módal confirmando la reserva al usuario.
-- Backend:
-    - R: Leer reserva
-    - U: Actualizar reserva
-    - D: Eliminar reserva
-
-Gestionar las horas del formulario!
-
-## Gestionar productos del menú
-Gestionar desde el backend y mostrar en la página `/menu` los nuevos cambios.
-- CRUD:
-    - C: Crear nuevos productos
-    - R: Mostrar en `/menu` (componente CardProduct con lógica)
-    - U: Actualizar datos de los productos
-    - D: Eliminar productos
-
 ## Componentes con lógica
-- CardProduct --> mostrar info según el tipo de producto
-- Menu: al clicar botón, mostrar cada producto según si son (botón con filtro):
+- TableProduct --> mostrar los datos de las comidas según el tipo de producto
+- Btn Menu: al clicar botón, mostrar cada producto según si son (botón con filtro):
     - Entrantes
     - Principales
     - Bebidas
-- Formulario --> mismo formulario en `/contact` y en `/resevation`
-    - Mostrar inputs concretos según la página (children)
+- ModalConfirmación y gestión de mensajes de error:
+    - Reserva
+    - Contact
 
-### FALTA: Página con slug
+## Gestionar productos del menú
+- Desde Prisma Studio
+- Mostrar todos los productos en el frontend.
+
+
+## FALTA: Página con slug 
+- Página de cada producto: al querer consultar un producto específico.
+
+# Frontend
+    - Diseño Contact
+    - Diseño Menú
+    - Acabar Home
+    - Textos coherentes
+    - Tipos de letra + colores y tamaños fuentes

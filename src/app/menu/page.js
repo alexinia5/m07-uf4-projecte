@@ -9,7 +9,6 @@ export default function Menu() {
       <main className="">
         <section></section>
         <section></section>
-        <section></section>
       </main>
       <Footer/>
     </div>
