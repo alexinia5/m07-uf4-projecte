@@ -28,3 +28,11 @@ export async function UpdateMeal (id, data) {
 export async function DeleteMeal (id) {
     await prisma.meal.delete({ where: { id } });
 }
+
+export async function getMealsByType (type) {
+    const meals = await prisma.meal.findMany({
+        where: type
+    });
+    
+    return meals;
+}

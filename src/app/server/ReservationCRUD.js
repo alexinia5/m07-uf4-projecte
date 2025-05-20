@@ -10,25 +10,33 @@ export async function GetReservationById (id) {
 }
 
 export async function CreateReservation (formData) {
-    const firstName = formData.get('fName');
-    const lastName = formData.get('lName');
-    const guest = parseInt(formData.get('guest'));
-    const date = formData.get('date');
-    const hour = formData.get('time');
-    const parkingRaw = formData.get('radio1');
+    try {
+        const data = {
+            firstName: formData.get('fName'),
+            lastName: formData.get('lName'),
+            guest: parseInt(formData.get('guest')),
+            date: formData.get('date'),
+            hour: formData.get('time'),
+            parking: formData.get('radio1'),
+        }
 
-    let parking = parkingRaw === "Sí" || parkingRaw === "on"
+        await prisma.reservation.create({ 
+            data: data
+        });
 
-    await prisma.reservation.create({ 
-        data: { 
-                firstName, 
-                lastName,
-                guest,
-                date,
-                hour,
-                parking
-            } 
-    });
+        return {
+            success: true,
+            msg: 'Tu reserva ha sido confirmada correctamente.'
+        }
+
+    } catch(error) {
+        console.log(error);
+
+        return {
+            success: false,
+            msg: 'No se ha podido hacer la reserva.'
+        }
+    }
 }
 
 export async function UpdateReservation (id, data) {

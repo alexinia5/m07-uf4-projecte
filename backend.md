@@ -6,9 +6,6 @@
     - Entrantes
     - Principales
     - Bebidas
-- ModalConfirmación y gestión de mensajes de error:
-    - Reserva
-    - Contact
 
 ## Gestionar productos del menú
 - Desde Prisma Studio

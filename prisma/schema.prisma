@@ -21,7 +21,7 @@ model Reservation {
   guest        Int
   date         String
   hour         String
-  parking      Boolean
+  parking      String
   createdAt    DateTime      @default(now())
 	updatedAt    DateTime      @updatedAt
 }

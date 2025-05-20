@@ -10,23 +10,32 @@ export async function GetContactId (id) {
 }
 
 export async function CreateContact (formData) {
-    const firstName = formData.get('firstName');
-    const lastName = formData.get('lastName');
-    const email = formData.get('email');
-    const phone = formData.get('phone');
-    const message = formData.get('message');
+    try {
+        const data = {
+            firstName: formData.get('firstName'),
+            lastName: formData.get('lastName'),
+            email: formData.get('email'),
+            phone: formData.get('phone'),
+            message: formData.get('message')
+        }
 
-    console.log('PRISMA.CONTACT:', prisma.contact);
+        await prisma.contact.create({ 
+            data: data
+        });
 
-    await prisma.contact.create({ 
-        data: { 
-                firstName, 
-                lastName,
-                email,
-                phone,
-                message,
-            } 
-    });
+        return {
+            success: true,
+            msg: 'Hemos recibido tu contacto.'
+        }
+
+    } catch(error) {
+        console.log(error);
+
+        return {
+            success: false,
+            msg: 'No se ha podido guardar el contacto.'
+        }
+    }
 }
 
 export async function UpdateContact (id, data) {

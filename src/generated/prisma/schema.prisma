@@ -36,3 +36,21 @@ model Contact {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
+
+enum MealType {
+  starter
+  main
+  dessert
+  drink
+  vegetarian
+}
+
+model Meal {
+  id        Int      @id @default(autoincrement())
+  name      String   @db.VarChar(100)
+  type      MealType
+  price     Float
+  allergens String?  @db.VarChar(100)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

@@ -1,14 +1,34 @@
 'use client'
 
 import { CreateReservation } from '@/app/server/ReservationCRUD';
+import { useState } from 'react';
+import ModalConfirmation from './modalConfirmation';
 
 // reutilizar formulario tanto para contacto como para reserva --> añadir campos según la página con children
 function ReservationForm() {
+    const [openModal, setOpenModal] = useState(false);
+    const [message, setMessage] = useState('');
+
+    async function handleSubmit (e) {
+        e.preventDefault();
+        let formData = new FormData(e.target)
+
+        let result = await CreateReservation(formData);
+        setMessage(result.msg);
+
+        if (result.success) {
+            setOpenModal(true);
+        } else {
+            console.log(result.msg)
+        }
+    }
+
+    const closeModal = () => setOpenModal(false);
 
     return (
         <div className="flex items-center justify-center mb-2">
             <div className="w-full max-w-[550px]">
-                <form action={CreateReservation}>
+                <form onSubmit={ e => handleSubmit(e)}>
                     <div className="-mx-3 flex flex-wrap">
                         <div className="w-full px-3 sm:w-1/2">
                             <div className="mb-5">
@@ -22,6 +42,7 @@ function ReservationForm() {
                                     name="fName"
                                     id="fName"
                                     placeholder="Nombre"
+                                    required={true}
                                     className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-sm font-medium text-[#6B7280] outline-none focus:border-[#945868] focus:shadow-md"
                                 />
                             </div>
@@ -39,6 +60,7 @@ function ReservationForm() {
                                     name="lName"
                                     id="lName"
                                     placeholder="Apellidos"
+                                    required={true}
                                     className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-sm font-medium text-[#6B7280] outline-none focus:border-[#945868] focus:shadow-md"
                                 />
                             </div>
@@ -57,6 +79,7 @@ function ReservationForm() {
                             id="guest"
                             placeholder="5"
                             min="0"
+                            required={true}
                             className="w-full appearance-none rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-sm font-medium text-[#6B7280] outline-none focus:border-[#945868] focus:shadow-md"
                         />
                     </div>
@@ -74,6 +97,7 @@ function ReservationForm() {
                                     type="date"
                                     name="date"
                                     id="date"
+                                    required={true}
                                     className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-sm font-medium text-[#6B7280] outline-none focus:border-[#945868] focus:shadow-md"
                                 />
                             </div>
@@ -90,6 +114,7 @@ function ReservationForm() {
                                     type="time"
                                     name="time"
                                     id="time"
+                                    required={true}
                                     className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-sm font-medium text-[#6B7280] outline-none focus:border-[#945868] focus:shadow-md"
                                 />
                             </div>
@@ -105,11 +130,13 @@ function ReservationForm() {
                                 <input
                                     type="radio"
                                     name="radio1"
-                                    id="radioButton1"
+                                    required={true}
+                                    id="yes"
                                     className="h-5 w-5"
+                                    value={"Sí"}
                                 />
                                 <label
-                                    htmlFor="radioButton1"
+                                    htmlFor="yes"
                                     className="pl-3 text-sm font-medium text-[#A27343]"
                                 >
                                     Sí
@@ -119,11 +146,12 @@ function ReservationForm() {
                                 <input
                                     type="radio"
                                     name="radio1"
-                                    id="radioButton2"
+                                    id="no"
                                     className="h-5 w-5"
+                                    value={"No"}
                                 />
                                 <label
-                                    htmlFor="radioButton2"
+                                    htmlFor="no"
                                     className="pl-3 text-sm font-medium text-[#A27343]"
                                 >
                                     No
@@ -135,10 +163,9 @@ function ReservationForm() {
                     <div className="mt-5">
                         <button type='submit' data-modal-target="popup-modal" data-modal-toggle="popup-modal"
                             className="hover:shadow-form rounded-3xl bg-[#27211c] py-2 px-4 text-center text-sm font-semibold text-white outline-none transition-all hover:bg-[#b7a57c]"
-                        >
-                            RESERVAR
-                        </button>
+                        >RESERVAR</button>
                     </div>
+                    {openModal && <ModalConfirmation show={openModal} message={message} closeModal={closeModal}/>}
                 </form>
             </div>
         </div>

@@ -162,7 +162,8 @@ exports.Prisma.ReservationOrderByRelevanceFieldEnum = {
   firstName: 'firstName',
   lastName: 'lastName',
   date: 'date',
-  hour: 'hour'
+  hour: 'hour',
+  parking: 'parking'
 };
 
 exports.Prisma.ContactOrderByRelevanceFieldEnum = {
