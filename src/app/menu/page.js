@@ -5,7 +5,7 @@ import Header from '.././components/Header'
 import Footer from '.././components/Footer'
 import BtnTypeMeal from '../components/TypeButton';
 import TableProduct from '../components/TableProduct';
-import getMealsByType from '../api/menu/MenuCRUD';
+import getMealsByType from '../api/menu/route';
 
 export default function Menu() {
   const [meals, setMeals] = useState([]);
