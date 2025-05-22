@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from 'react';
-import { CreateContact } from '@/app/server/ContactCRUD';
+import { CreateContact } from '@/app/api/contact/ContactCRUD';
 import ModalConfirmation from './modalConfirmation';
 
 export default function ContactForm() {

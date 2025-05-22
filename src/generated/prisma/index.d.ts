@@ -2988,6 +2988,7 @@ export namespace Prisma {
     type: $Enums.MealType | null
     price: number | null
     allergens: string | null
+    imgSrc: string | null
     createdAt: Date | null
     updatedAt: Date | null
   }
@@ -2998,6 +2999,7 @@ export namespace Prisma {
     type: $Enums.MealType | null
     price: number | null
     allergens: string | null
+    imgSrc: string | null
     createdAt: Date | null
     updatedAt: Date | null
   }
@@ -3008,6 +3010,7 @@ export namespace Prisma {
     type: number
     price: number
     allergens: number
+    imgSrc: number
     createdAt: number
     updatedAt: number
     _all: number
@@ -3030,6 +3033,7 @@ export namespace Prisma {
     type?: true
     price?: true
     allergens?: true
+    imgSrc?: true
     createdAt?: true
     updatedAt?: true
   }
@@ -3040,6 +3044,7 @@ export namespace Prisma {
     type?: true
     price?: true
     allergens?: true
+    imgSrc?: true
     createdAt?: true
     updatedAt?: true
   }
@@ -3050,6 +3055,7 @@ export namespace Prisma {
     type?: true
     price?: true
     allergens?: true
+    imgSrc?: true
     createdAt?: true
     updatedAt?: true
     _all?: true
@@ -3147,6 +3153,7 @@ export namespace Prisma {
     type: $Enums.MealType
     price: number
     allergens: string | null
+    imgSrc: string | null
     createdAt: Date
     updatedAt: Date
     _count: MealCountAggregateOutputType | null
@@ -3176,6 +3183,7 @@ export namespace Prisma {
     type?: boolean
     price?: boolean
     allergens?: boolean
+    imgSrc?: boolean
     createdAt?: boolean
     updatedAt?: boolean
   }, ExtArgs["result"]["meal"]>
@@ -3188,11 +3196,12 @@ export namespace Prisma {
     type?: boolean
     price?: boolean
     allergens?: boolean
+    imgSrc?: boolean
     createdAt?: boolean
     updatedAt?: boolean
   }
 
-  export type MealOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "type" | "price" | "allergens" | "createdAt" | "updatedAt", ExtArgs["result"]["meal"]>
+  export type MealOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "type" | "price" | "allergens" | "imgSrc" | "createdAt" | "updatedAt", ExtArgs["result"]["meal"]>
 
   export type $MealPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "Meal"
@@ -3203,6 +3212,7 @@ export namespace Prisma {
       type: $Enums.MealType
       price: number
       allergens: string | null
+      imgSrc: string | null
       createdAt: Date
       updatedAt: Date
     }, ExtArgs["result"]["meal"]>
@@ -3579,6 +3589,7 @@ export namespace Prisma {
     readonly type: FieldRef<"Meal", 'MealType'>
     readonly price: FieldRef<"Meal", 'Float'>
     readonly allergens: FieldRef<"Meal", 'String'>
+    readonly imgSrc: FieldRef<"Meal", 'String'>
     readonly createdAt: FieldRef<"Meal", 'DateTime'>
     readonly updatedAt: FieldRef<"Meal", 'DateTime'>
   }
@@ -3951,6 +3962,7 @@ export namespace Prisma {
     type: 'type',
     price: 'price',
     allergens: 'allergens',
+    imgSrc: 'imgSrc',
     createdAt: 'createdAt',
     updatedAt: 'updatedAt'
   };
@@ -3998,7 +4010,8 @@ export namespace Prisma {
 
   export const MealOrderByRelevanceFieldEnum: {
     name: 'name',
-    allergens: 'allergens'
+    allergens: 'allergens',
+    imgSrc: 'imgSrc'
   };
 
   export type MealOrderByRelevanceFieldEnum = (typeof MealOrderByRelevanceFieldEnum)[keyof typeof MealOrderByRelevanceFieldEnum]
@@ -4201,6 +4214,7 @@ export namespace Prisma {
     type?: EnumMealTypeFilter<"Meal"> | $Enums.MealType
     price?: FloatFilter<"Meal"> | number
     allergens?: StringNullableFilter<"Meal"> | string | null
+    imgSrc?: StringNullableFilter<"Meal"> | string | null
     createdAt?: DateTimeFilter<"Meal"> | Date | string
     updatedAt?: DateTimeFilter<"Meal"> | Date | string
   }
@@ -4211,6 +4225,7 @@ export namespace Prisma {
     type?: SortOrder
     price?: SortOrder
     allergens?: SortOrderInput | SortOrder
+    imgSrc?: SortOrderInput | SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     _relevance?: MealOrderByRelevanceInput
@@ -4225,6 +4240,7 @@ export namespace Prisma {
     type?: EnumMealTypeFilter<"Meal"> | $Enums.MealType
     price?: FloatFilter<"Meal"> | number
     allergens?: StringNullableFilter<"Meal"> | string | null
+    imgSrc?: StringNullableFilter<"Meal"> | string | null
     createdAt?: DateTimeFilter<"Meal"> | Date | string
     updatedAt?: DateTimeFilter<"Meal"> | Date | string
   }, "id">
@@ -4235,6 +4251,7 @@ export namespace Prisma {
     type?: SortOrder
     price?: SortOrder
     allergens?: SortOrderInput | SortOrder
+    imgSrc?: SortOrderInput | SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     _count?: MealCountOrderByAggregateInput
@@ -4253,6 +4270,7 @@ export namespace Prisma {
     type?: EnumMealTypeWithAggregatesFilter<"Meal"> | $Enums.MealType
     price?: FloatWithAggregatesFilter<"Meal"> | number
     allergens?: StringNullableWithAggregatesFilter<"Meal"> | string | null
+    imgSrc?: StringNullableWithAggregatesFilter<"Meal"> | string | null
     createdAt?: DateTimeWithAggregatesFilter<"Meal"> | Date | string
     updatedAt?: DateTimeWithAggregatesFilter<"Meal"> | Date | string
   }
@@ -4417,6 +4435,7 @@ export namespace Prisma {
     type: $Enums.MealType
     price: number
     allergens?: string | null
+    imgSrc?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
   }
@@ -4427,6 +4446,7 @@ export namespace Prisma {
     type: $Enums.MealType
     price: number
     allergens?: string | null
+    imgSrc?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
   }
@@ -4436,6 +4456,7 @@ export namespace Prisma {
     type?: EnumMealTypeFieldUpdateOperationsInput | $Enums.MealType
     price?: FloatFieldUpdateOperationsInput | number
     allergens?: NullableStringFieldUpdateOperationsInput | string | null
+    imgSrc?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -4446,6 +4467,7 @@ export namespace Prisma {
     type?: EnumMealTypeFieldUpdateOperationsInput | $Enums.MealType
     price?: FloatFieldUpdateOperationsInput | number
     allergens?: NullableStringFieldUpdateOperationsInput | string | null
+    imgSrc?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -4456,6 +4478,7 @@ export namespace Prisma {
     type: $Enums.MealType
     price: number
     allergens?: string | null
+    imgSrc?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
   }
@@ -4465,6 +4488,7 @@ export namespace Prisma {
     type?: EnumMealTypeFieldUpdateOperationsInput | $Enums.MealType
     price?: FloatFieldUpdateOperationsInput | number
     allergens?: NullableStringFieldUpdateOperationsInput | string | null
+    imgSrc?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -4475,6 +4499,7 @@ export namespace Prisma {
     type?: EnumMealTypeFieldUpdateOperationsInput | $Enums.MealType
     price?: FloatFieldUpdateOperationsInput | number
     allergens?: NullableStringFieldUpdateOperationsInput | string | null
+    imgSrc?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -4713,6 +4738,7 @@ export namespace Prisma {
     type?: SortOrder
     price?: SortOrder
     allergens?: SortOrder
+    imgSrc?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
   }
@@ -4728,6 +4754,7 @@ export namespace Prisma {
     type?: SortOrder
     price?: SortOrder
     allergens?: SortOrder
+    imgSrc?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
   }
@@ -4738,6 +4765,7 @@ export namespace Prisma {
     type?: SortOrder
     price?: SortOrder
     allergens?: SortOrder
+    imgSrc?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
   }

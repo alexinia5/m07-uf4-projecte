@@ -25,38 +25,37 @@ export default function Home() {
             <Link href="/reservation">RESERVAR UNA MESA</Link>
           </div>
         </section>
-        <section className="about-us">
-          <div className="flex justify-center items-center gap-5 p-10">
-            <Image src="/home/home-about-us.jpeg" width={400} height={500} alt="" />
-            <div className="about-info text-white p-6 w-3xl text-center flex flex-col items-center gap-8">
-              <h1 className="text-5xl text-[#190A02] font-semibold">Bienvenidos a nuestro restaurante</h1>
-              <div className="text-[#0F1D00] w-100">
-                <p>Lorem ipsum dolor sit, amet consectetur
-                  adipisicing elit. Dicta ducimus rerum veritatis
-                  vel unde? Nemo praesentium earum aliquam explicabo
-                  maiores voluptas inventore numquam facere. Ea
-                  inventore eaque ratione tempora cum.</p>
-
-                <p className="mt-4">Lorem ipsum dolor sit, amet consectetur
-                  adipisicing elit. Dicta ducimus rerum veritatis
-                  vel unde? Nemo praesentium earum aliquam explicabo
-                  maiores voluptas inventore numquam facere. Ea
-                  inventore eaque ratione tempora cum.</p>
-              </div>
+        <section className="about-us mt-40 mb-25">
+          <div className="flex flex-col justify-center items-center gap-5">
+            <h1 className="text-4xl text-[#190A02] w-sm text-center">Bienvenidos a nuestro restaurante</h1>
+            <div className="flex justify-center items-start gap-5 p-10">
+              <Image src="/home/home-about-us.jpeg" width={400} height={500} alt="" />
+                <div className="about-info bg-[#1F1F25] p-6 w-bs text-center flex flex-col justify-center items-center gap-8">
+                  <div className="w-sm text-white">
+                    <h2 className="mb-3">jkljk vlkvlxvñl</h2>
+                    <h1 className="mb-6">TRADICIONAL & MODERNO</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur
+                      adipisicing elit. Dicta ducimus rerum veritatis
+                      vel unde?
+                      Lorem ipsum dolor sit, amet consectetur
+                      adipisicing elit. Dicta ducimus rerum veritatis
+                      vel unde?</p>
+                  </div>
+                </div>
+              <Image src="/home/about-home.jpeg" width={400} height={500} alt="" />
             </div>
-            <Image src="/home/about-home.jpeg" width={450} height={500} alt="" />
           </div>
         </section>
         <section className="our-menu mt-14 flex flex-col justify-center items-center gap-8">
           <div className="menu-descrip-h text-stone-100 text-center flex flex-col justify-center items-center w-sm">
-            <h1 className="mb-4 text-4xl text-[#b8b156]">Descubre nuestro menú</h1>
-            <p className="text-sm w-75 text-[#ced6cb]">
+            <h1 className="mb-4 text-4xl text-[#5e5c45]">Descubre nuestro menú</h1>
+            <p className="text-sm w-75 text-[#3f3e37]">
               Lorem ipsum dolor sit, amet consectetur
               adipisicing elit. Dicta ducimus rerum veritatis
               vel unde? Nemo praesentium earum aliquam explicabo
               maiores voluptas inventore numquam facere.</p>
           </div>
-          <div className="flex flex-row gap-10 bg-[#DBD8D0] p-7 rounded-3xl">
+          <div className="flex flex-row gap-10">
             <div className="starters">
               <Image src="/starters/meataballs.jpeg" width={282} height={280} alt="" />
               <h2 className="text-center font-semibold mt-3">ENTRANTES</h2>
@@ -75,9 +74,9 @@ export default function Home() {
             </div>
           </div>
           <Link href="/menu" className="rounded-3xl border font-semibold text-sm 
-          border-white text-stone-50 px-8 py-2 transition-all hover:bg-stone-300 hover:border-stone-300 hover:text-stone-900">VER MÁS</Link>
+          border-[#693F0C] text-[#693F0C] px-8 py-2 transition-all hover:bg-[#493c33] hover:text-stone-300">MENÚ</Link>
         </section>
-        <section className="link-reservation"></section>
+        <section className="our-interior"></section>
       </main>
       <Footer />
     </div>

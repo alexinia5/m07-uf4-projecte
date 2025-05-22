@@ -46,12 +46,15 @@ input[type="radio"] {
 }
 
 .about-info {
+  height: 601px;
 }
 
 .our-menu {
-  background-color:#09121d;
   border-top-left-radius: 35%;
-  height: 115vh;
+}
+
+.our-interior {
+
 }
 
 /* contact us */

@@ -7,7 +7,6 @@ function Header() {
       <nav className="bg-transparent text-stone-400 p-3 flex justify-between items-center pl-5 pr-5">
         <Link href="/"><Image src="/gallery/logo.png" width="60" height="60" alt=""/></Link>
         <div className="space-x-6">
-          {/* <Link href="/about" className="hover:text-amber-100">NOSOTROS</Link> */}
           <Link href="/menu" className="transition-all hover:text-amber-50">MENÚ</Link>
           <Link href="/contact" className="transition-all hover:text-amber-50">CONTACTO</Link>
           <Link href="/reservation" className="transition-all hover:text-amber-50">RESERVA</Link>

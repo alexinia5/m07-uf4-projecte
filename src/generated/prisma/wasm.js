@@ -149,6 +149,7 @@ exports.Prisma.MealScalarFieldEnum = {
   type: 'type',
   price: 'price',
   allergens: 'allergens',
+  imgSrc: 'imgSrc',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'
 };
@@ -181,7 +182,8 @@ exports.Prisma.NullsOrder = {
 
 exports.Prisma.MealOrderByRelevanceFieldEnum = {
   name: 'name',
-  allergens: 'allergens'
+  allergens: 'allergens',
+  imgSrc: 'imgSrc'
 };
 exports.MealType = exports.$Enums.MealType = {
   starter: 'starter',

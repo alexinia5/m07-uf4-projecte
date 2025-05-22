@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE `Meal` ADD COLUMN `imgSrc` VARCHAR(191) NULL;

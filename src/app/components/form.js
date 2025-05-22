@@ -1,6 +1,6 @@
 'use client'
 
-import { CreateReservation } from '@/app/server/ReservationCRUD';
+import { CreateReservation } from '@/app/api/reservation/ReservationCRUD';
 import { useState } from 'react';
 import ModalConfirmation from './modalConfirmation';
 
