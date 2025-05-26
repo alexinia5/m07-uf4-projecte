@@ -56,7 +56,7 @@ export default function Home() {
               <h2 className="text-center font-semibold mt-3">ENTRANTES</h2>
             </div>
             <div className="mains">
-              <Image src="/home/main-h.jpeg" width={300} height={280} alt="" />
+              <Image src="/home/main-h.jpeg" width={240} height={280} alt="" />
               <h2 className="text-center font-semibold mt-3">PRINCIPALES</h2>
             </div>
             <div className="desserts">
