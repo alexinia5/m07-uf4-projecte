@@ -17,9 +17,8 @@ export default function Reservation() {
             <div className="flex flex-col justify-center items-center gap-3 w-xl h-44">
               <h1 className="text-6xl text-center text-[#0E0E10]">Rerserva tu mesa</h1>
               <p className="text-sm text-center w-sm text-[#122414]">
-                Lorem ipsum dolor sit, amet consectetur adipisicing 
-                elit. Dicta ducimus rerum veritatis vel unde? Nemo 
-                praesentium earum aliquam explicabo maiores voluptas.
+                Reserva fácil y rápido tu lugar en una experiencia Tradicional & Moderna.
+                Te esperamos con sabor, estilo y atención personalizada.  
               </p>
             </div>
           </div>
